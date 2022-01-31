@@ -56,6 +56,7 @@ create table Caisse(
 	id int primary key,
 	montant float,
 	idFiangonana int,
+	date date,
 	foreign key (idFiangonana) references Fiangonana(id)
 );
 insert into Caisse values(1,10000.1,1);
