@@ -17,8 +17,26 @@ public class DetailPret {
 	Timestamp date ;
 	double montant;
 	String remarque;
+        double caisseActuel;
+        double interet;
     public void setDate(Timestamp date) {
         this.date = date;
+    }
+    public double getInteret()
+    {
+        return interet;
+    }
+    public double getCaisseActuel()
+    {
+        return caisseActuel;
+    }
+    public void setInteret(double i)
+    {
+        interet=i;
+    }
+    public void setCaisseActuel(double c)
+    {
+        caisseActuel=c;
     }
     public void setId(int id) {
         this.id = id;
