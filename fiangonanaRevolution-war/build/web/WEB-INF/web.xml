@@ -4,9 +4,17 @@
         <servlet-name>NewServlet</servlet-name>
         <servlet-class>servlet.NewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginMpiangona</servlet-name>
+        <servlet-class>servlet.LoginMpiangona</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewServlet</servlet-name>
         <url-pattern>/essai</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginMpiangona</servlet-name>
+        <url-pattern>/LoginMpiangona</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

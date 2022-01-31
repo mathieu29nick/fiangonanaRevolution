@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package entity;
-
+import connection.Connection;
+import java.sql.ResultSet;
+import java.util.Vector;
 /**
  *
  * @author P13A-97-SOATOAVINA
@@ -60,5 +62,27 @@ public class Mpiangona {
     public Mpiangona()
     {
         
+    }
+    public Vector select(String req) 
+    {
+         connection.Connection c=new Connection();
+         Vector v=new Vector();
+         try
+         {
+            java.sql.Connection con=c.getConnection();
+             java.sql.Statement stmt=con.createStatement();
+            ResultSet res=stmt.executeQuery(req);
+            while(res.next())
+            {
+                Mpiangona m=new Mpiangona(res.getInt("id"),res.getString("nom"),res.getString("mdp"),res.getInt("idFiangonana"),res.getInt("idFamille"));
+                v.addElement(m);
+            }
+          con.close();
+         }
+         catch(Exception e)
+         {
+             e.printStackTrace();
+         }
+         return v;
     }
 }

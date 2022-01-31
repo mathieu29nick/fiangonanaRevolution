@@ -3,23 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/ConfiancePlus.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocal.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Caisse.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/PretFutur.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Mpiangona.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/SinodamParitany.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Mpandray.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/DetailPret.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Rakitra.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Fiangonana.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Pret.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Pasitera.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocalLocal.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Famille.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/connection/Connection.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/PourcentageRakitra.java</file>
-            <file>file:/D:/itu/s5/Tahina/ejb/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Remboursement.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Mpiangona.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/connection/Connection.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocalLocal.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocal.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Fonctions.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/DetailPret.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/LoginMpiangonaLocal.java</file>
+            <file>file:/D:/itu/s5/Tahina/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/LoginMpiangona.java</file>
         </group>
     </open-files>
 </project-private>
