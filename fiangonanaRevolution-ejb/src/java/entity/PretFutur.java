@@ -17,8 +17,26 @@ public class PretFutur {
 	Timestamp dateLimite;
 	int idMpiangona ;
 	double montant;
+        double interet;
+        double caisseActuel;
     public void setDateLimite(Timestamp dateLimite) {
         this.dateLimite = dateLimite;
+    }
+    public double getCaisseActuel()
+    {
+        return caisseActuel;
+    }
+    public double getInteret()
+    {
+        return interet;
+    }
+    public void setInteret(double i)
+    {
+        interet=i;
+    }
+    public void setCaisseActuel(double c)
+    {
+        caisseActuel=c;
     }
     public void setDatePret(Timestamp datePret) {
         this.datePret = datePret;
@@ -47,13 +65,15 @@ public class PretFutur {
     public double getMontant() {
         return montant;
     }
-    public PretFutur(int i,Timestamp d1,Timestamp d2,int m,double mo)
+    public PretFutur(int i,Timestamp d1,Timestamp d2,int m,double mo,double caisseActuel,double interet)
     {
         id=i;
         datePret=d1;
         dateLimite=d2;
         idMpiangona=m;
         montant=mo;
+        this.caisseActuel=caisseActuel;
+        this.interet=interet;
     }
     public PretFutur()
     {
