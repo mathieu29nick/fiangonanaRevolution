@@ -10,7 +10,7 @@ package entity;
  * @author P13A-97-SOATOAVINA
  */
 public class Rakitra {
-     int id  ;
+         int id  ;
 	 int idFiangonana ;
 	 double montant ;
 	 int semaine ;

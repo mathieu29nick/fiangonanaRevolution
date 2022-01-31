@@ -11,7 +11,7 @@ import java.sql.DriverManager;
  *
  * @author P13A-97-SOATOAVINA
  */
-public class Connection {
+public class ConnectionBD {
     public static java.sql.Connection getConnection()throws Exception
     {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

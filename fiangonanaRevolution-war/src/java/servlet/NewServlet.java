@@ -35,7 +35,7 @@ public class NewServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
          try (PrintWriter out = response.getWriter()) {
-           String l=session.lol();
+            String l=session.lol();
             request.setAttribute("lol",l);
             RequestDispatcher dispat = request.getRequestDispatcher("essai.jsp");
                 dispat.forward(request, response);
