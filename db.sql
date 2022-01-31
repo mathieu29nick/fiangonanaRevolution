@@ -59,7 +59,8 @@ create table Caisse(
 	date date,
 	foreign key (idFiangonana) references Fiangonana(id)
 );
-insert into Caisse values(1,10000.1,1);
+create sequence seq_Caisse  start with 1 increment by 1;
+insert into Caisse values(1,10000.1,1,'2021-10-12');
 create table Rakitra(
 	id int primary key,
 	idFiangonana int,
@@ -68,7 +69,7 @@ create table Rakitra(
 	annee int,
 	foreign key (idFiangonana) references Fiangonana(id)
 );
-create sequence seq_Rakitra  start with 1 increment by 1;
+create sequence seq_Rakitra  start with 1 increment by 1; 
 
 insert into Rakitra values(next value for seq_Rakitra,1,100.0,1,2017);
 insert into Rakitra values(next value for seq_Rakitra,1,123.0,2,2017);
@@ -355,6 +356,7 @@ create table Pret
 	foreign key (idMpiangona) references Mpiangona(id)
 );
 create sequence seq_Pret  start with 1 increment by 1;
+
 create table DetailPret(
 	id int primary key,
 	idPret int,
@@ -364,6 +366,7 @@ create table DetailPret(
 	foreign key (idPret) references Pret(id)
 );
 create sequence seq_DetailPret start with 1 increment by 1;
+
 create table Remboursement
 (
 	id int primary key,
