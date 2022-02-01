@@ -5,12 +5,14 @@
         <group>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Pasitera.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocalLocal.java</file>
+            <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Rakitra.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Function.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/NewSessionBeanLocal.java</file>
-            <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/connection/ConnectionBD.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/PourcentageRakitra.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/connection/Connection.java</file>
+            <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/InsertionRakitraLocal.java</file>
             <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/entity/Caisse.java</file>
+            <file>file:/C:/Users/Nick/ExamenFinal_Rojo/fiangonanaRevolution/fiangonanaRevolution-ejb/src/java/session/InsertionRakitra.java</file>
         </group>
     </open-files>
 </project-private>
