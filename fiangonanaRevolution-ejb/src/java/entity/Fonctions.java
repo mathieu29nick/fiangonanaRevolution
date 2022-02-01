@@ -16,17 +16,106 @@ import java.util.Vector;
  * @author P13A-97-SOATOAVINA
  */
 public class Fonctions {
-    /*public Date dateDimanche(int semaine,int annee)
+    public Date prediction(double montant,int idMpiangona,double caisse,int semaine,int annee)
     {
-        
-    }*/
+        Date prediction=dateDimanche(semaine,annee);
+        double somme=0;
+        double moins=montant-caisse;
+        return prediction;
+    }
+    public Date dateDimanche(int semaine,int annee)
+    {
+        Date daty=new Date(annee-1900,0,1);
+        System.out.println(daty);
+        int fin=365;
+        int count=0;
+        if(annee%4==0)fin=366;
+        for(int i=1;i<=fin;i++){
+            if(count==semaine)break;
+            daty.setMonth(0);
+            daty.setDate(i);
+            if(daty.getDay()==0)count++;
+        }
+        return daty;
+    }
+    public double remboursementDetailPret(int semaine,int annee,int fiangonana)
+    {
+        String req="select sum(rembour) as s from remboursementDetailPret where datepart(week,dateLimite)="+semaine+" and datepart(year,dateLimite)="+annee;
+        System.out.println(req);
+        double r=0;
+         try
+        {
+             Connection c=new Connection();
+            java.sql.Connection con=c.getConnection();
+            java.sql.Statement stmt=con.createStatement();
+            ResultSet res=stmt.executeQuery(req);
+            while(res.next())
+            {
+                r=res.getDouble("s");
+            }
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return r;
+    }
+    public double remboursementPretParSemaine(int semaine,int annee,int fiangonana)
+    {
+        double r=0;
+        String req="select sum(rembour) as s from remboursementPret where datepart(week,dateLimite)="+semaine+" and datepart(year,dateLimite)="+annee;
+        System.out.println(req);
+        try
+        {
+             Connection c=new Connection();
+            java.sql.Connection con=c.getConnection();
+            java.sql.Statement stmt=con.createStatement();
+            ResultSet res=stmt.executeQuery(req);
+            while(res.next())
+            {
+                r=res.getDouble("s");
+            }
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return r;
+    }
+    public double caisseActuel()
+    {
+        double caisse=0;
+        try
+        {
+            String req="select sum(montant) as caisse from caisse";
+            System.out.println(req);
+              Connection c=new Connection();
+            java.sql.Connection con=c.getConnection();
+            java.sql.Statement stmt=con.createStatement();
+            ResultSet res=stmt.executeQuery(req);
+            while(res.next())
+            {
+                caisse=res.getDouble("caisse");
+            }
+            con.close();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return caisse;
+    }
     public PretFutur pretFarany()
     {
         PretFutur p=null;
-        String req="select top 1* from pretFarany order by DESC date";
+        String req="select top 1* from pretFutur order by datePret DESC ";
         try
         {
+            
            Connection c=new Connection();
+           System.out.println(req);
             java.sql.Connection con=c.getConnection();
             java.sql.Statement stmt=con.createStatement();
             ResultSet res=stmt.executeQuery(req);
@@ -43,6 +132,7 @@ public class Fonctions {
             {
                 p=val;
             }
+            con.close();
         }
         catch(Exception e)
         {
@@ -50,13 +140,14 @@ public class Fonctions {
         }
         return p;
     }
-    public double pourcentageRakitra(Date d)
+    public double pourcentageRakitra(Date d,int fiangonana)
     {
         double var=0;
         try
         {
             String dateString=(d.getYear())+""+(d.getMonth())+""+d.getDate();
-            String req="select pourcentage from PourcentageRakitra where date1>='"+dateString+" 00:00:00' and date2<='"+dateString+" 23:59:59 '";
+            String req="select pourcentage from PourcentageRakitra where date1>='"+dateString+" 00:00:00' and date2<='"+dateString+" 23:59:59 ' and idFiangonana="+fiangonana;
+            System.out.println(req);
             Connection c=new Connection();
             java.sql.Connection con=c.getConnection();
             java.sql.Statement stmt=con.createStatement();
@@ -65,6 +156,7 @@ public class Fonctions {
             {
                 var=res.getDouble("pourcentage");
             }
+            con.close();
         }
         catch(Exception e)
         {
@@ -75,15 +167,17 @@ public class Fonctions {
     public double moyenneRakitra(int semaine,int idFiangonana)
     {
         double m=0;
-        String req="select AVG(montant) as moyenneRakitra from Rakitra group by semaine having semaine="+semaine;
+        String req="select AVG(montant) as moyenneRakitra from Rakitra group by semaine,idFiangonana having semaine="+semaine+" and idFiangonana="+idFiangonana;
         try
         {
+            System.out.println(req);
             Connection c=new Connection();
             java.sql.Connection con=c.getConnection();
             java.sql.Statement stmt=con.createStatement();
             ResultSet res=stmt.executeQuery(req);
             res.next();
             m=res.getInt("moyenneRakitra");
+            con.close();
         }
          catch(Exception e)
          {
@@ -101,9 +195,11 @@ public class Fonctions {
             java.sql.Connection con=c.getConnection();
             String req="SELECT datepart(week,'"+daty+"') as numero";
             java.sql.Statement stmt=con.createStatement();
+            System.out.println(req);
             ResultSet res=stmt.executeQuery(req);
             res.next();
             num=res.getInt("numero");
+            con.close();
         }
        catch(Exception e)
        {
